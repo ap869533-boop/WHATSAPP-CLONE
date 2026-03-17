@@ -71,7 +71,7 @@ const verifyOtp = async(req, res) => {
             return response(res,400,"Phone number and suffix are required");
          }
         const fullPhoneNumber = `+${phoneSuffix}${phoneNumber}`;
-        user = await User.findOne({phoneNumber});
+        user = await User.findOne({phoneNumber: fullPhoneNumber});
         if(!user){
             return response(res,404,"User not found");
         }

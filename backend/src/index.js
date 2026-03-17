@@ -22,8 +22,8 @@ connectToDatabase()
 
 
 const corsOption = {
-  origin: process.env.FRONTEND_URL,
-  Credentials: true
+  origin: "http://localhost:5173",
+  credentials: true
 }
 
 
